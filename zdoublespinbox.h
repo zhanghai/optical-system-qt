@@ -6,7 +6,7 @@
 #ifndef ZDOUBLESPINBOX_H
 #define ZDOUBLESPINBOX_H
 
-#include <QtWidgets/QDoubleSpinBox>
+#include <QDoubleSpinBox>
 
 class ZDoubleSpinBox : public QDoubleSpinBox {
 

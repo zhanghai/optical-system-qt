@@ -16,15 +16,19 @@ class MainWindow : public QMainWindow {
 
 Q_OBJECT
 
+private:
+    Ui::MainWindow *ui;
+
 public:
     explicit MainWindow(QWidget *parent = Q_NULLPTR);
     ~MainWindow();
 
 private slots:
     void on_infiniteObjectDistanceCheck_stateChanged(int state);
+    void on_computeButton_clicked();
 
 private:
-    Ui::MainWindow *ui;
+    bool isObjectDistanceInfinite();
 };
 
 #endif //MAIN_WINDOW_H
