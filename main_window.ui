@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>640</width>
-    <height>360</height>
+    <width>360</width>
+    <height>240</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -15,6 +15,9 @@
   </property>
   <widget class="QWidget" name="centralWidget">
    <layout class="QVBoxLayout" name="verticalLayout">
+    <property name="spacing">
+     <number>8</number>
+    </property>
     <property name="leftMargin">
      <number>8</number>
     </property>
@@ -28,97 +31,79 @@
      <number>8</number>
     </property>
     <item>
-     <layout class="QGridLayout" name="gridLayout">
-      <property name="spacing">
+     <widget class="QCheckBox" name="infiniteObjectDistanceCheck">
+      <property name="text">
+       <string>物体位于无穷远处</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <layout class="QFormLayout" name="formLayout">
+      <property name="horizontalSpacing">
+       <number>0</number>
+      </property>
+      <property name="verticalSpacing">
        <number>8</number>
       </property>
       <item row="0" column="0">
-       <widget class="QCheckBox" name="infiniteObjectDistanceCheck">
+       <widget class="QLabel" name="fieldAngleLabel">
         <property name="text">
-         <string>物体位于无穷远处</string>
+         <string>物方倾角：</string>
         </property>
        </widget>
       </item>
       <item row="0" column="1">
-       <layout class="QHBoxLayout" name="fieldAngleLayout">
-        <property name="spacing">
-         <number>0</number>
+       <widget class="ZDoubleSpinBox" name="fieldAngleSpin">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
         </property>
-        <item>
-         <widget class="QLabel" name="fieldAngleLabel">
-          <property name="text">
-           <string>物方倾角：</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="ZDoubleSpinBox" name="fieldAngleSpin">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-          <property name="decimals">
-           <number>3</number>
-          </property>
-         </widget>
-        </item>
-       </layout>
+        <property name="decimals">
+         <number>3</number>
+        </property>
+       </widget>
       </item>
       <item row="1" column="0">
-       <layout class="QHBoxLayout" name="objectDistanceLayout">
-        <property name="spacing">
-         <number>0</number>
+       <widget class="QLabel" name="objectDistanceLabel">
+        <property name="text">
+         <string>物体距离：</string>
         </property>
-        <item>
-         <widget class="QLabel" name="objectDistanceLabel">
-          <property name="text">
-           <string>物体距离：</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="ZDoubleSpinBox" name="objectDistanceSpin">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-          <property name="decimals">
-           <number>3</number>
-          </property>
-         </widget>
-        </item>
-       </layout>
+       </widget>
       </item>
       <item row="1" column="1">
-       <layout class="QHBoxLayout" name="objectHeightLayout">
-        <property name="spacing">
-         <number>0</number>
+       <widget class="ZDoubleSpinBox" name="objectDistanceSpin">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
         </property>
-        <item>
-         <widget class="QLabel" name="objectHeightLabel">
-          <property name="text">
-           <string>物体高度：</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="ZDoubleSpinBox" name="objectHeightSpin">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-          <property name="decimals">
-           <number>3</number>
-          </property>
-         </widget>
-        </item>
-       </layout>
+        <property name="decimals">
+         <number>3</number>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="objectHeightLabel">
+        <property name="text">
+         <string>物体高度：</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="ZDoubleSpinBox" name="objectHeightSpin">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="decimals">
+         <number>3</number>
+        </property>
+       </widget>
       </item>
      </layout>
     </item>
